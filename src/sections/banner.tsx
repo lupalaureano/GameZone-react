@@ -1,12 +1,12 @@
  export default function AppBanner() {
     return (
-    <banner>
+    <section className="banner">
         <div className="col-lg-4 col-sm-6 bantext">
-            <c>Bem vindo à</c>
-            <h1>Game<c>zone.</c>
+            <span className="c">Bem vindo à</span>
+            <h1>Game<span className="c">zone.</span>
             </h1>
             <h2>
-                <c>Explore.</c> jogue. Conecte-se.
+                <span className="c">Explore.</span> jogue. Conecte-se.
             </h2>
             <p>O seu destino definitivo para descobrir os melhores jogos, notícias e uma comundade apaixonada por games.
             </p>
@@ -18,6 +18,6 @@
         <div>
             <img src="./img/personagem_banner.png" alt="personagem" id="pers_banner" />
         </div>
-    </banner>
+    </section>
     )
 }
