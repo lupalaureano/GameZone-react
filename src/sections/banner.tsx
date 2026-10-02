@@ -11,7 +11,7 @@
             <p>O seu destino definitivo para descobrir os melhores jogos, notícias e uma comundade apaixonada por games.
             </p>
             <div>
-                <a href="#jogos" className="btn_purp col-5">Explorar Jogos ></a>
+                <a href="#jogos" className="btn_purp col-5">Explorar Jogos {'>'}</a>
                 
             </div>
         </div>
