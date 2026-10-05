@@ -1,5 +1,6 @@
 import AppNavbar from './components/navbar'
 import AppBanner from './sections/banner'
+import AppJogos from './sections/carrosel'
 import AppFooter from './components/footer'
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <>
        <AppNavbar />
        <AppBanner />
+       <AppJogos />
        <AppFooter />
     </>
   )
