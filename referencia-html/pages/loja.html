@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameZone | Lojas Físicas Parceiras</title>
+
+
+      <!-- Importando Jquery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+
+    <!-- Fim Importação Jquery-->
+
+    <!--importando o Bootstrap-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <!-- Fim importacao Bootstrap-->
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&family=Tektur:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+  <!-- CSS do projeto -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/lojaf.css" />
+</head>
+<body>
+
+ <!-- Inicio Menu Header-->
+    <!-- Importando Jquery-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+
+    <!-- Fim Importação Jquery-->
+
+    <header class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a href="../index.html" class="navbar-brand"><img src="../img/logo.png" alt="Logo" id="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarSupportedContent" class="menu collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="../pages/jogos.html" class="nav-link active">Jogos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../pages/noticias.html" class="nav-link">Notícias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../pages/comunidade.html" class="nav-link">Comunidade</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../pages/contato.html" class="nav-link">sobre</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#" id="pesquisa"><img src="../img/search.png" alt="pequisa"></a>
+                    <a href="../pages/usuario.html" id="usuario"><img src="../img/user.png" alt="user" id="userimg">
+                        Usuário</a>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- Fim Menu Header-->
+
+  <!-- NAVBAR ->
+  <header class="navbar-gz">
+    <div class="logo-gz">
+      <i class="bi bi-hexagon-fill"></i>
+      <div>
+        <span class="logo-title">GAME<span class="accent">ZONE</span></span>
+        <span class="logo-sub">SEU UNIVERSO GAMER</span>
+      </div>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#">JOGOS</a>
+      <a href="#">NOTÍCIAS</a>
+      <a href="#">COMUNIDADE</a>
+      <a href="loja.html" class="active">LOJAS</a>
+      <a href="#">SOBRE</a>
+    </nav>
+
+    <div class="nav-actions">
+      <i class="bi bi-search"></i>
+      <button class="btn-usuario"><i class="bi bi-person-fill"></i> USUÁRIO</button>
+    </div>
+  </header>
+
+  <-- HERO -->
+  <section class="hero-loja">
+    <h1>Lojas <span class="accent">Parceiras</span></h1>
+    <p>Encontre lojas físicas oficiais da GameZone espalhadas pelo Sudeste do Brasil.</p>
+  </section>
+
+  <!-- FILTROS -->
+  <section class="filtros-loja">
+    <p class="filtro-label">Filtrar por estado</p>
+    <div class="filtro-btns">
+      <button type="button" class="filtro-btn chip active" data-estado="Todos">Todos</button>
+      <button type="button" class="filtro-btn chip" data-estado="SP">São Paulo</button>
+      <button type="button" class="filtro-btn chip" data-estado="RJ">Rio de Janeiro</button>
+      <button type="button" class="filtro-btn chip" data-estado="MG">Minas Gerais</button>
+    </div>
+  </section>
+
+  <!-- GRID DE LOJAS -->
+  <section class="grid-lojas" id="gridLojas">
+
+    <!-- SP -->
+    <div class="card-loja" data-estado="SP">
+      <div class="card-img">
+        <span class="badge-parceiro"><i class="bi bi-patch-check-fill"></i> Parceiro Oficial</span>
+      </div>
+      <div class="card-body">
+        <h3>GameHub SP</h3>
+        <p class="card-endereco"><i class="bi bi-geo-alt-fill"></i> Av. Paulista, 1000 — São Paulo/SP</p>
+        <p class="card-horario"><i class="bi bi-clock-fill"></i> Seg a Sáb: 10h às 20h</p>
+        <span class="tag-estado">SP</span>
+      </div>
+    </div>
+
+    <div class="card-loja" data-estado="SP">
+      <div class="card-img" >
+        <span class="badge-parceiro"><i class="bi bi-patch-check-fill"></i> Parceiro Oficial</span>
+      </div>
+      <div class="card-body">
+        <h3>LevelUp Games</h3>
+        <p class="card-endereco"><i class="bi bi-geo-alt-fill"></i> Rua Augusta, 500 — São Paulo/SP</p>
+        <p class="card-horario"><i class="bi bi-clock-fill"></i> Seg a Sáb: 11h às 21h</p>
+        <span class="tag-estado">SP</span>
+      </div>
+    </div>
+
+    <!-- RJ -->
+    <div class="card-loja" data-estado="RJ">
+      <div class="card-img" >
+        <span class="badge-parceiro"><i class="bi bi-patch-check-fill"></i> Parceiro Oficial</span>
+      </div>
+      <div class="card-body">
+        <h3>GameZone Store RJ</h3>
+        <p class="card-endereco"><i class="bi bi-geo-alt-fill"></i> Av. Rio Branco, 200 — Rio de Janeiro/RJ</p>
+        <p class="card-horario"><i class="bi bi-clock-fill"></i> Seg a Sáb: 10h às 19h</p>
+        <span class="tag-estado">RJ</span>
+      </div>
+    </div>
+
+    <div class="card-loja" data-estado="RJ">
+      <div class="card-img" >
+        <span class="badge-parceiro"><i class="bi bi-patch-check-fill"></i> Parceiro Oficial</span>
+      </div>
+      <div class="card-body">
+        <h3>Arena Games RJ</h3>
+        <p class="card-endereco"><i class="bi bi-geo-alt-fill"></i> Rua Barata Ribeiro, 300 — Rio de Janeiro/RJ</p>
+        <p class="card-horario"><i class="bi bi-clock-fill"></i> Seg a Sáb: 10h às 20h</p>
+        <span class="tag-estado">RJ</span>
+      </div>
+    </div>
+
+    <!-- MG -->
+    <div class="card-loja" data-estado="MG">
+      <div class="card-img">
+        <span class="badge-parceiro"><i class="bi bi-patch-check-fill"></i> Parceiro Oficial</span>
+      </div>
+      <div class="card-body">
+        <h3>Pixel Store MG</h3>
+        <p class="card-endereco"><i class="bi bi-geo-alt-fill"></i> Av. Afonso Pena, 700 — Belo Horizonte/MG</p>
+        <p class="card-horario"><i class="bi bi-clock-fill"></i> Seg a Sáb: 10h às 19h</p>
+        <span class="tag-estado">MG</span>
+      </div>
+    </div>
+
+    <div class="card-loja" data-estado="MG">
+      <div class="card-img" >
+        <span class="badge-parceiro"><i class="bi bi-patch-check-fill"></i> Parceiro Oficial</span>
+      </div>
+      <div class="card-body">
+        <h3>GameCore MG</h3>
+        <p class="card-endereco"><i class="bi bi-geo-alt-fill"></i> Rua da Bahia, 450 — Belo Horizonte/MG</p>
+        <p class="card-horario"><i class="bi bi-clock-fill"></i> Seg a Sáb: 11h às 20h</p>
+        <span class="tag-estado">MG</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- MENSAGEM SEM RESULTADOS (controlada via JS) -->
+  <p id="semResultados" class="sem-resultados" style="display:none;">
+    Nenhuma loja encontrada para esse estado.
+  </p>
+
+  <!--Inicio Footer-->
+    <footer>
+        <div class="col-lg-2 col-md-12 foot-spc">
+            <img src="../img/logo.png" alt="">
+            <p>Conectando Jogadores.</p>
+            <p>Criando Histórias</p>
+            <p>construindo o futuro dos Games.</p>
+            <div id="social">
+                <img src="../img/discord.png" alt="" class="img">
+                <img src="../img/instagram.png" alt="" class="img">
+                <img src="../img/twitter.png" alt="" class="img">
+                <img src="../img/youtube.png" alt="" class="img">
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-12 foot-spc">
+            <h4>Navegação</h4>
+            <p>
+            <a href="../pages/jogos.html">Jogos</a><br>
+            <a href="../pages/noticias.html">Notícias</a><br>
+            <a href="../pages/comunidade.html">Comundade</a><br>
+            <a href="../pages/contato.html">Sobre</a>
+            </p>
+        </div>
+        <div class="col-lg-2 col-md-12 foot-spc">
+            <p>
+            <a href="../pages/reviews.html">Reviews</a><br>
+            <a href="../pages/proximos_lancamentos.html">Próximos Lançamentos</a><br>
+            <a href="../pages/loja.html">Loja</a><br>
+            <!--<a href="../pages/sobre.html">sobre</a>-->
+            </p>
+        </div>
+        <div class="col-lg-2 col-md-12 foot-spc">
+            <h4>Fique por dentro</h4>
+            <p>Receba as ultimas notícias e lançamentos em primeira mão!</p>
+            <form action="">
+                <input type="email" name="email" id="email">
+                <button id="send"><img src="../img/send.png" /></button>
+            </form>
+        </div>
+    </footer>
+    <!-- Fim footer-->
+
+  <!--script src="../js/loja.js" defer></script-->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+                
+      document.querySelectorAll('.chip').forEach(chip => {
+        
+        chip.addEventListener('click', () => {
+
+
+        
+          document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+          chip.classList.add('active');
+          const estado = chip.dataset.estado;
+          console.log(estado);
+          document.querySelectorAll('.card-loja').forEach(card => {
+            if (estado === 'Todos' || card.dataset.estado === estado) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+        
+
+      })
+
+    
+    
+</script>
+</body>
+</html>

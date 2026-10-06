@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Gamezone - Seu Universo Gamer
+    </title>
+
+
+    <!-- Importando Jquery-->
+    <script src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+
+
+
+    <!-- Fim Importação Jquery-->
+
+    <!--importando o Bootstrap-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <!-- Fim importacao Bootstrap-->
+
+    <!-- Importando Font google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Tektur:wght@400..900&display=swap"
+        rel="stylesheet">
+    <!-- fim importacao google fonts-->
+
+    <!-- Importando o CSS da pagina -->
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Fim importacao css -->
+
+    <script src="js/index.js"></script>
+</head>
+
+<!--inicio Body-->
+
+<body>
+    <!-- Inicio Menu Header-->
+    <!-- Importando Jquery-->
+    <script src="https://code.jquery.com/jquery-4.0.0.js"
+        integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+
+
+
+    <!-- Fim Importação Jquery-->
+
+    <header class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a href="./index.html" class="navbar-brand"><img src="./img/logo.png" alt="Logo" id="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarSupportedContent" class="menu collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="./pages/jogos.html" class="nav-link">Jogos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./pages/noticias.html" class="nav-link">Notícias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./pages/comunidade.html" class="nav-link">Comunidade</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./pages/contato.html" class="nav-link">sobre</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#" id="pesquisa"><img src="img/search.png" alt="pequisa"></a>
+                    <a href="./pages/usuario.html" id="usuario"><img src="img/user.png" alt="user" id="userimg">
+                        Usuário</a>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- Fim Menu Header-->
+
+    <!-- Inicio Banner -->
+    <banner>
+        <div class="col-lg-4 col-sm-6 bantext">
+            <c>Bem vindo à</c>
+            <h1>Game<c>zone.</c>
+            </h1>
+            <h2>
+                <c>Explore.</c> jogue. Conecte-se.
+            </h2>
+            <p>O seu destino definitivo para descobrir os melhores jogos, notícias e uma comundade apaixonada por games.
+            </p>
+            <div>
+                <a href="pages/jogos.html" class="btn_purp col-5">Explorar Jogos ></a>
+                <a href="pages/contato.html" class="btn_outglow col-4">Saiba Mais</a>
+            </div>
+        </div>
+        <div>
+            <img src="img/personagem_banner.png" alt="personagem" id="pers_banner">
+        </div>
+    </banner>
+
+    <!-- Fim Banner -->
+
+
+    <!-- Inicio Lançamentos -->
+
+    <div id="lancamentos">
+
+        <div class="sml-title col-3">
+            <div><img src="img/fire.png" alt="foguinho"></div>
+            <div>
+                <a href="pages/proximos_lancamentos.html" style="text-decoration: none;">
+                    <h4>Lançamentos</h4>
+                </a>
+            </div>
+        </div>
+        <div>
+
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner carousel-inner-home">
+                    <div class="carousel-item carousel-item-home">
+                        <div class="card card-home">
+                            <a href="#">
+                            <div class="img-wraper">
+                                <img class="card-img-top card-img-top-home img-home" src="img/hwleg.jpg"
+                                    alt="Hogwarts Legacy">
+                            </div>
+                            <div class="card-body card-body-home">
+                                <span class="badge badge-secondary">RPG</span>
+                                <h5 class="card-title card-title-home">Hogwarts Legacy</h5>
+                                <p class="card-text card-text-home">Um RPG de ação e mundo aberto ambientado no mundo de
+                                    Harry Potter.
+                                </p>
+                            </div>
+                            <div class="card-rating-plat">
+                                <div>
+                                    <img src="img/star.png" alt="estrelas" style="filter:grayscale(0%)"><span>4.8</span>
+                                </div>
+                                <div>
+                                    <img src="img/win-plat-logo.png" alt="plataforma">
+                                    <img src="img/ps-plat-logo.png" alt="plataforma">
+                                    <img src="img/sw-plat-logo.png" alt="plataforma">
+                                    <img src="img/xbox-plat-logo.png" alt="plataforma">
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item carousel-item-home">
+                        <div class="card card-home">
+                            <a href="pages/Jogo.html?gameId=16">
+                                <div class="img-wraper">
+                                    <img class="card-img-top card-img-top-home img-home" src="img/cybp2077.jpg"
+                                        alt="Cyberpunk 2077">
+                                </div>
+                                <div class="card-body card-body-home">
+                                    <span class="badge badge-secondary">Ação</span>
+                                    <h5 class="card-title card-title-home">Cyberpunk 2077</h5>
+                                    <p class="card-text card-text-home">Um RPG de ação em mundo aberto que se passa na
+                                        futurista e perigosa
+                                        Night City.
+                                    </p>
+                                </div>
+                                <div class="card-rating-plat">
+                                    <div>
+                                        <img src="img/star.png" alt="estrelas"
+                                            style="filter:grayscale(0%)"><span>4.6</span>
+                                    </div>
+                                    <div>
+                                        <img src="img/win-plat-logo.png" alt="plataforma">
+                                        <img src="img/ps-plat-logo.png" alt="plataforma">
+                                        <img src="img/sw-plat-logo.png" alt="plataforma">
+                                        <img src="img/xbox-plat-logo.png" alt="plataforma">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item carousel-item-home">
+                        <div class="card card-home">
+                            <a href="#"><div class="img-wraper">
+                                <img class="card-img-top card-img-top-home img-home" src="img/bf6.jpg"
+                                    alt="Battlefield 6">
+                            </div>
+                            <div class="card-body card-body-home">
+                                <span class="badge badge-secondary">FPS</span>
+                                <h5 class="card-title card-title-home">Battlefield 6</h5>
+                                <p class="card-text card-text-home">um jogo de tiro em primeira pessoa focado na
+                                    experiência definitiva
+                                    de guerra total.
+                                </p>
+                            </div>
+                            <div class="card-rating-plat">
+                                <div>
+                                    <img src="img/star.png" alt="estrelas" style="filter:grayscale(0%)"><span>4.5</span>
+                                </div>
+                                <div>
+                                    <img src="img/win-plat-logo.png" alt="plataforma">
+                                    <img src="img/ps-plat-logo.png" alt="plataforma">
+                                    <img src="img/sw-plat-logo.png" alt="plataforma">
+                                    <img src="img/xbox-plat-logo.png" alt="plataforma">
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item carousel-item-home">
+                        <div class="card card-home">
+                            <a href="pages/Jogo.html?gameId=8">
+                            <div class="img-wraper">
+                                <img class="card-img-top card-img-top-home img-home" src="img/for6.png" alt="Forza 6">
+                            </div>
+                            <div class="card-body card-body-home">
+                                <span class="badge badge-secondary">corrida</span>
+                                <h5 class="card-title card-title-home">Forza 6</h5>
+                                <p class="card-text card-text-home">um jogo de corrida em mundo aberto ambientado no
+                                    Japão.
+                                </p>
+                            </div>
+                            <div class="card-rating-plat">
+                                <div>
+                                    <img src="img/star.png" alt="estrelas" style="filter:grayscale(0%)"><span>4.9</span>
+                                </div>
+                                <div>
+                                    <img src="img/win-plat-logo.png" alt="plataforma">
+                                    <img src="img/ps-plat-logo.png" alt="plataforma">
+                                    <img src="img/sw-plat-logo.png" alt="plataforma">
+                                    <img src="img/xbox-plat-logo.png" alt="plataforma">
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item carousel-item-home">
+                        <div class="card card-home">
+                            <a href="pages/jogo.html?gameId=16">
+                                <div class="img-wraper">
+                                    <img class="card-img-top card-img-top-home img-home" src="img/cybp2077.jpg"
+                                        alt="Cyberpunk 2077">
+                                </div>
+                                <div class="card-body card-body-home">
+                                    <span class="badge badge-secondary">Ação</span>
+                                    <h5 class="card-title card-title-home">Cyberpunk 2077</h5>
+                                    <p class="card-text card-text-home">Um RPG de ação em mundo aberto que se passa na
+                                        futurista e perigosa
+                                        Night City.
+                                    </p>
+                                </div>
+                                <div class="card-rating-plat">
+                                    <div>
+                                        <img src="img/star.png" alt="estrelas"
+                                            style="filter:grayscale(0%)"><span>4.6</span>
+                                    </div>
+                                    <div>
+                                        <img src="img/win-plat-logo.png" alt="plataforma">
+                                        <img src="img/ps-plat-logo.png" alt="plataforma">
+                                        <img src="img/sw-plat-logo.png" alt="plataforma">
+                                        <img src="img/xbox-plat-logo.png" alt="plataforma">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item carousel-item-home">
+                        <div class="card card-home">
+                            <a href="#">
+                            <div class="img-wraper">
+                                <img class="card-img-top card-img-top-home img-home" src="img/hwleg.jpg"
+                                    alt="Hogwarts Legacy">
+                            </div>
+                            <div class="card-body card-body-home">
+                                <span class="badge badge-secondary">RPG</span>
+                                <h5 class="card-title card-title-home">Hogwarts Legacy</h5>
+                                <p class="card-text card-text-home">Um RPG de ação e mundo aberto ambientado no mundo de
+                                    Harry Potter.
+                                </p>
+                            </div>
+                            <div class="card-rating-plat">
+                                <div>
+                                    <img src="img/star.png" alt="estrelas" style="filter:grayscale(0%)"><span>4.8</span>
+                                </div>
+                                <div>
+                                    <img src="img/win-plat-logo.png" alt="plataforma">
+                                    <img src="img/ps-plat-logo.png" alt="plataforma">
+                                    <img src="img/sw-plat-logo.png" alt="plataforma">
+                                    <img src="img/xbox-plat-logo.png" alt="plataforma">
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev carousel-control-prev-home" type="button">
+                    <span class="carousel-control-prev-icon carousel-control-prev-icon-home" aria-hidden="true"></span>
+
+                </button>
+                <button class="carousel-control-next carousel-control-next-home" type="button">
+                    <span class="carousel-control-next-icon carousel-control-next-icon-home" aria-hidden="true"></span>
+
+                </button>
+
+                <!-- codigo de navegação carousel-->
+                <Script>
+                    var carouselWidth = $('.carousel-inner')[0].scrollWidth;
+                    var cardWidth = $('.carousel-item').width();
+
+                    var scrollPosition = 0;
+                    const next = $('.carousel-control-next-home');
+                    next.on('click', function () {
+                        if (scrollPosition < carouselWidth - cardWidth * 5) {
+                            //console.log('clicou');
+                            scrollPosition += cardWidth;
+                            //console.log(scrollPosition);
+                            $('.carousel-inner').animate({ scrollLeft: scrollPosition }, 600);
+                        }
+                    })
+                    const prev = $('.carousel-control-prev-home');
+                    prev.on('click', function () {
+                        if (scrollPosition > 0) {
+                            //console.log('clicou');
+                            scrollPosition -= cardWidth;
+                            //console.log(scrollPosition);
+                            $('.carousel-inner').animate({ scrollLeft: scrollPosition }, 600);
+                        }
+                    })
+                </Script>
+                <!-- Fim Navegação carousel-->
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Fim Lançamentos -->
+
+    <!-- Inicio Qual é o seu próximo jogo-->
+    <div id="proximoJogo">
+        <h3>Qual é seu próximo jogo?</h3>
+        <span>Encontre experêcias baseadas no seu estilo.</span>
+        <div class="tipojogo">
+            <a href="./pages/jogos.html?filter=rpg">
+                <div class="minicard">
+                    <img src="img/sword.png" alt="RPG">
+                    <h4>RPG</h4>
+                </div>
+            </a>
+            <a href="./pages/jogos.html?filter=fps">
+                <div class="minicard">
+                    <img src="img/target.png" alt="FPS">
+                    <h4>FPS</h4>
+                </div>
+            </a>
+            <a href="./pages/jogos.html?filter=ação">
+                <div class="minicard">
+                    <img src="img/action.png" alt="Ação">
+                    <h4>Ação</h4>
+                </div>
+            </a>
+            <a href="./pages/jogos.html?filter=aventura">
+                <div class="minicard">
+                    <img src="img/compass.png" alt="Aventura">
+                    <h4>Aventura</h4>
+                </div>
+            </a>
+            <a href="./pages/jogos.html?filter=estratégia">
+                <div class="minicard">
+                    <img src="img/rook.png" alt="Estratégia">
+                    <h4>estratégia</h4>
+                </div>
+            </a>
+            <a href="./pages/jogos.html?filter=corrida">
+                <div class="minicard">
+                    <img src="img/speedometer.png" alt="Corrida">
+                    <h4>Corrida</h4>
+                </div>
+            </a>
+            <a href="./pages/jogos.html?filter=terror">
+                <div class="minicard">
+                    <img src="img/ghost.png" alt="Terror">
+                    <h4>Terror</h4>
+                </div>
+            </a>
+            <a href="./pages/jogos.html?filter=esporte">
+                <div class="minicard">
+                    <img src="img/esports.png" alt="Esport">
+                    <h4>Esportes</h4>
+                </div>
+            </a>
+        </div>
+        <a href="./pages/jogos.html" class="minicard btn_outglow">Veja todos os Genêros ></a>
+    </div>
+    <!-- Final Proximo Jogo-->
+
+    <!-- Inicio Estatisticas-->
+    <div id="estatisticas">
+        <div class="card-sts">
+            <img src="img/people.png" alt="pessoas">
+            <div>
+                <h3>10K+</h3>
+                <span>Jogadores<br>ativos</span>
+            </div>
+        </div>
+        <span class="borda"></span>
+        <div class="card-sts">
+            <img src="img/console.png" alt="controle">
+            <div>
+                <h3>500+</h3>
+                <span>Jogos<br>Disponíveis</span>
+            </div>
+        </div>
+        <span class="borda"></span>
+        <div class="card-sts">
+            <img src="img/newspaper.png" alt="jornal">
+            <div>
+                <h3>1K+</h3>
+                <span>notícias<br>publicadas</span>
+            </div>
+        </div>
+        <span class="borda"></span>
+        <div class="card-sts">
+            <img src="img/trophy.png" alt="trofeu">
+            <div>
+                <h3>50+</h3>
+                <span>Torneiros<br>Realizados</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Fim Estatisticas-->
+
+    <!--Inicio Footer-->
+    <footer>
+        <div class="col-lg-2 col-md-12 foot-spc">
+            <img src="img/logo.png" alt="">
+            <p>Conectando Jogadores.</p>
+            <p>Criando Histórias</p>
+            <p>construindo o futuro dos Games.</p>
+            <div id="social">
+                <img src="img/discord.png" alt="" class="img">
+                <img src="img/instagram.png" alt="" class="img">
+                <img src="img/twitter.png" alt="" class="img">
+                <img src="img/youtube.png" alt="" class="img">
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-12 foot-spc">
+            <h4>Navegação</h4>
+            <p>
+                <a href="./pages/jogos.html">Jogos</a><br>
+                <a href="./pages/noticias.html">Notícias</a><br>
+                <a href="./pages/comunidade.html">Comundade</a><br>
+                <a href="./pages/contato.html">Sobre</a>
+            </p>
+        </div>
+        <div class="col-lg-2 col-md-12 foot-spc">
+            <p>
+                <a href="./pages/reviews.html">Reviews</a><br>
+                <a href="./pages/proximos_lancamentos.html">Próximos Lançamentos</a><br>
+                <a href="./pages/loja.html">Loja</a><br>
+                <!--<a href="./pages/contato.html">sobre</a>-->
+            </p>
+        </div>
+        <div class="col-lg-2 col-md-12 foot-spc">
+            <h4>Fique por dentro</h4>
+            <p>Receba as ultimas notícias e lançamentos em primeira mão!</p>
+            <form action="">
+                <input type="email" name="email" id="email">
+                <button id="send"><img src="img/send.png" /></button>
+            </form>
+        </div>
+    </footer>
+    <!-- Fim footer-->
+    <!--importando o Bootstrap-->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Fim importacao Bootstrap-->
+</body>
+
+</html>
