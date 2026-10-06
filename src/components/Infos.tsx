@@ -24,7 +24,7 @@ export default function Infos({ jogo }: any) {
             <div className="news-article-layout accordion-content">
                 <article className="news-article">
                     <div id="cover" className="news-article-cover">
-                        <img src={"./img/jogos/game" + jogo.caminho_imagem} alt={jogo.nome} title={jogo.nome} />
+                        <img src={"./img/jogos/game" + jogo.caminho_imagem} alt={jogo.nome} title={jogo.nome}  />
                     </div>
 
                     <header className="news-article-header">
@@ -32,7 +32,7 @@ export default function Infos({ jogo }: any) {
 
                     </header>
 
-                    <div className="news-article-content">
+                    <div className="news-article-content" id={jogo.id+'-'+jogo.nome}>
                         <p id="descricao">{jogo.descricao}</p>
 
                     </div>

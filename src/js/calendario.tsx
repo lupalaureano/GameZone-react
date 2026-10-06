@@ -1,9 +1,14 @@
-export default function constructMonthCalendar() {
+export default function constructMonthCalendar(now:Date) {
 
-    const weekdays = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"];
+
+    const mesData = [];
+    let semData = [];
+
+
+    //const weekdays = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"];
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
-    let now = new Date();
+
+
     const m = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
     //console.log(m);
 
@@ -13,23 +18,23 @@ export default function constructMonthCalendar() {
     const prevMonth = new Date(`${months[now.getMonth() - 1]} ${new Date(now.getFullYear(), now.getMonth(), 0).getDate()} ${now.getFullYear()} 0:0:0`);
     const nextMonth = new Date(`${months[now.getMonth() + 1]} ${new Date(now.getFullYear(), now.getMonth() + 2, 1).getDate()} ${now.getFullYear()} 0:0:0`);
 
+    //console.log(monthStart)
+    //const currentMonth = document.getElementById("mes");
+    //currentMonth.innerHTML = meses[now.getMonth()];
+    // console.log(now);
 
-    const curentMonth = document.getElementById("mes");
-    curentMonth.innerHTML = meses[now.getMonth()];
+    // let element = document.getElementById("dias");
 
+    // //element.remove();
+    // //console.log(element);
 
-    let element = document.getElementById("dias");
+    // const f = document.createElement("tbody");
+    // f.className = "dias";
+    // f.setAttribute("id", "dias");
 
-    //element.remove();
-    //console.log(element);
+    // element?.before(f);
 
-    const f = document.createElement("tbody");
-    f.className = "dias";
-    f.setAttribute("id", "dias");
-
-    element.before(f);
-
-    element.remove();
+    // element?.remove();
 
 
 
@@ -38,14 +43,14 @@ export default function constructMonthCalendar() {
     const idCreator = [];
     //const semanas = [];
     let isfirstweek = true;
-    for (i = 0; i < m; i++) {
-        var cadaSemana = [];
+    for (let i = 0; i < m; i++) {
+        //let cadaSemana = [];
         if (isfirstweek) {
             if (weekdayStart != 0) {
-                for (x = weekdayStart; x > 0; x--) {
+                for (let x = weekdayStart; x > 0; x--) {
                     //console.log(prevMonth.getDate());
                     // console.log(x);
-                    var p = prevMonth.getDate() - x + 1 + "_" + months[prevMonth.getMonth()] + "_" + prevMonth.getFullYear();
+                    let p = prevMonth.getDate() - x + 1 + "_" + months[prevMonth.getMonth()] + "_" + prevMonth.getFullYear();
                     //console.log(p);
                     idCreator.push(p);
 
@@ -55,13 +60,13 @@ export default function constructMonthCalendar() {
             isfirstweek = false;
         }
         idCreator.push(monthStart.getDate() + i + "_" + months[monthStart.getMonth()] + "_" + monthStart.getFullYear());
-
+        
         if (i == m - 1) {
             //console.log(weekdayEnd.getDay());
-            var k = 0;
-            for (l = weekdayEnd.getDay(); l < 6; l++) {
+            let k = 0;
+            for (let l = weekdayEnd.getDay(); l < 6; l++) {
 
-                var n = nextMonth.getDate() + k + "_" + months[nextMonth.getMonth()] + "_" + nextMonth.getFullYear();
+                let n = nextMonth.getDate() + k + "_" + months[nextMonth.getMonth()] + "_" + nextMonth.getFullYear();
                 k += 1;
                 //console.log(n);
                 idCreator.push(n);
@@ -70,30 +75,43 @@ export default function constructMonthCalendar() {
         }
     }
     // console.log(idCreator);
-    var id = idCreator;
-    // console.log(id.length);
+    let id = idCreator;
+    console.log('length id:'+id.length);
     const sem = idCreator.length / 7;
-    for (w = 0; w < sem; w++) {
-        // console.log(sem);
-        // console.log(w);
-        createTr = document.createElement("tr");
-        var tr = f.appendChild(createTr);
+    for (let w = 0; w < sem; w++) {
+        
+        for (let i = 0; i < 7; i++) {
 
-        for (i = 0; i < 7; i++) {
-
-            createTd = document.createElement("td");
-            createTd.setAttribute("id", id[0]);
+            // let createTd = document.createElement("td");
+            // createTd.setAttribute("id", id[0]);
 
             const texto = id[0].split("_");
-            const td = tr.appendChild(createTd);
-            if (texto[1] != months[now.getMonth()])
-                td.className = "other_month";
-            const textNode = document.createTextNode(texto[0]);
-            td.appendChild(textNode);
-            //console.log(i);
-            id.shift();
+            
+            let nomeClasse = ""
+            
+                        
+            let diaData = {
+                id: id[0],
+                texto: texto[0],
+                class: nomeClasse,
+                url:""
+            }
 
+            if (texto[1] != months[now.getMonth()])
+                diaData.class = "other_month";
+
+            if(diaData.id != 'NaN_undefined_NaN')
+                semData.push(diaData);
+            else
+                console.log(idCreator)
+            
+            id.shift();
         }
+        mesData.push(semData)
+        semData = []
+        
+        //console.log(mesData)
+        
     }
 
 
@@ -152,19 +170,20 @@ export default function constructMonthCalendar() {
 
 
 
-    for (i = 0; i < games.length; i++) {
+    for (let i = 0; i < games.length; i++) {
 
-        if (document.getElementById(games[i].id)) {
-
-            const url = `url ("${games[i].url}")`;
-            //console.log(document.getElementById(games[i].id));
-            const e = document.getElementById(games[i].id);
-            e.style.backgroundImage = `url('${games[i].url}')`;
-
-        }
+        mesData.map((semana) => {
+            semana.map((dia) => {
+                if(dia.id === games[i].id)
+                    dia.url = games[i].url;
+                
+            })
+        })
 
     };
 
+    //console.log(mesData);
 
+    return mesData
 
 }

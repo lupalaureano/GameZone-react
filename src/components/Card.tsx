@@ -2,7 +2,8 @@ export default function Card(props: any) {
 
 
     return (
-        <div className="carousel-item carousel-item-home" id={props.jogo.id} key={props.jogo.id} onClick={props.onCardClick} >
+        <div className="carousel-item carousel-item-home" id={props.jogo.id} key={props.jogo.id} onClick={props.onCardClick}>
+            <a href={'#'+props.jogo.id+'-'+props.jogo.nome}>
             <div className="card card-home">
                 <div className="img-wraper">
                     <img className="card-img-top card-img-top-home img-home" src={"./img/jogos"+props.jogo.caminho_imagem}
@@ -34,6 +35,7 @@ export default function Card(props: any) {
                 </div>
 
             </div>
-        </div>
+        </a></div>
+        
     )
 }
