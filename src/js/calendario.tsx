@@ -1,46 +1,32 @@
-export default function constructMonthCalendar(now:Date) {
+export default function constructMonthCalendar(atual: Date) {
 
 
     const mesData = [];
     let semData = [];
 
-
-    //const weekdays = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"];
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 
-    const m = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+    const m = new Date(atual.getFullYear(), atual.getMonth() + 1, 0).getDate();
     //console.log(m);
 
-    const monthStart = new Date(`${months[now.getMonth()]} 1 ${now.getFullYear()} 0:0:0`);
+    const monthStart = new Date(`${months[atual.getMonth()]} 1 ${atual.getFullYear()} 0:0:0`);
     const weekdayStart = monthStart.getDay();          // Day of the week(mon - sun)
-    const weekdayEnd = new Date(`${months[now.getMonth()]} ${m} ${now.getFullYear()} 0:0:0`);
-    const prevMonth = new Date(`${months[now.getMonth() - 1]} ${new Date(now.getFullYear(), now.getMonth(), 0).getDate()} ${now.getFullYear()} 0:0:0`);
-    const nextMonth = new Date(`${months[now.getMonth() + 1]} ${new Date(now.getFullYear(), now.getMonth() + 2, 1).getDate()} ${now.getFullYear()} 0:0:0`);
+    const weekdayEnd = new Date(`${months[atual.getMonth()]} ${m} ${atual.getFullYear()} 0:0:0`);
+    let prevMonth
+    let nextMonth
 
-    //console.log(monthStart)
-    //const currentMonth = document.getElementById("mes");
-    //currentMonth.innerHTML = meses[now.getMonth()];
-    // console.log(now);
-
-    // let element = document.getElementById("dias");
-
-    // //element.remove();
-    // //console.log(element);
-
-    // const f = document.createElement("tbody");
-    // f.className = "dias";
-    // f.setAttribute("id", "dias");
-
-    // element?.before(f);
-
-    // element?.remove();
-
-
-
-    //element.appendChild(f);
-    //console.log(f);
-    const idCreator = [];
+    if (atual.getMonth() == 0){
+        prevMonth = new Date(`${months[11]} ${new Date(atual.getFullYear(), atual.getMonth(), 0).getDate()} ${atual.getFullYear()-1} 0:0:0`);
+    }else{
+        prevMonth = new Date(`${months[atual.getMonth() - 1]} ${new Date(atual.getFullYear(), atual.getMonth(), 0).getDate()} ${atual.getFullYear()} 0:0:0`);
+    }   
+    if (atual.getMonth() == 11){
+        nextMonth = new Date(`${months[0]} ${new Date(atual.getFullYear(), atual.getMonth() + 2, 1).getDate()} ${atual.getFullYear()-1} 0:0:0`);
+    }else{
+        nextMonth = new Date(`${months[atual.getMonth() + 1]} ${new Date(atual.getFullYear(), atual.getMonth() + 2, 1).getDate()} ${atual.getFullYear()} 0:0:0`);
+    }
+    const idCreator: any = [];
     //const semanas = [];
     let isfirstweek = true;
     for (let i = 0; i < m; i++) {
@@ -60,7 +46,7 @@ export default function constructMonthCalendar(now:Date) {
             isfirstweek = false;
         }
         idCreator.push(monthStart.getDate() + i + "_" + months[monthStart.getMonth()] + "_" + monthStart.getFullYear());
-        
+
         if (i == m - 1) {
             //console.log(weekdayEnd.getDay());
             let k = 0;
@@ -68,50 +54,54 @@ export default function constructMonthCalendar(now:Date) {
 
                 let n = nextMonth.getDate() + k + "_" + months[nextMonth.getMonth()] + "_" + nextMonth.getFullYear();
                 k += 1;
-                //console.log(n);
-                idCreator.push(n);
+                if (n != 'NaN_undefined_NaN')
+                    idCreator.push(n);
 
             }
         }
     }
     // console.log(idCreator);
-    let id = idCreator;
-    console.log('length id:'+id.length);
-    const sem = idCreator.length / 7;
+    const id: any = [];
+    idCreator.map((idArray: any, i: number) => {
+        if (idArray != 'NaN_undefined_NaN')
+            return id.push(idCreator[i])
+    });
+    //console.log(id);
+    const sem = id.length / 7;
     for (let w = 0; w < sem; w++) {
-        
+
         for (let i = 0; i < 7; i++) {
 
             // let createTd = document.createElement("td");
             // createTd.setAttribute("id", id[0]);
 
             const texto = id[0].split("_");
-            
+
             let nomeClasse = ""
-            
-                        
+
+
             let diaData = {
                 id: id[0],
                 texto: texto[0],
                 class: nomeClasse,
-                url:""
+                url: ""
             }
 
-            if (texto[1] != months[now.getMonth()])
+            if (texto[1] != months[atual.getMonth()])
                 diaData.class = "other_month";
 
-            if(diaData.id != 'NaN_undefined_NaN')
+            if (diaData.id != 'NaN_undefined_NaN')
                 semData.push(diaData);
             else
-                console.log(idCreator)
-            
+                id.shift();
+
             id.shift();
         }
         mesData.push(semData)
         semData = []
-        
+
         //console.log(mesData)
-        
+
     }
 
 
@@ -174,9 +164,9 @@ export default function constructMonthCalendar(now:Date) {
 
         mesData.map((semana) => {
             semana.map((dia) => {
-                if(dia.id === games[i].id)
+                if (dia.id === games[i].id)
                     dia.url = games[i].url;
-                
+
             })
         })
 

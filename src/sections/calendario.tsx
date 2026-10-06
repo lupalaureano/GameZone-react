@@ -15,22 +15,31 @@ export default function AppCalendario() {
     const prev = () => {
         // console.log('Element was clicked!');
         const temp = atual.getMonth();
-        const t = atual;
-        t.setMonth(temp -1);
+        let t = atual;
+        if(temp==0)
+            t = new Date(atual.getFullYear() -1, 11, 1);
+        else
+            t.setMonth(temp-1);
+        console.log(t)
         setAtual(t);
-        setSelecionado(meses[atual.getMonth()]);
-        setMes(constructMonthCalendar(atual));
-        //console.log(selecionado)
+        setSelecionado(meses[t.getMonth()]);
+        setMes(constructMonthCalendar(t));
+        //console.log(atual);
     };
 
     const next = () => {
         // console.log('Element was clicked!');
         const temp = atual.getMonth();
-        const t = atual;
-        t.setMonth(temp +1);
+        let t = atual;
+        if(temp == 11)
+            t = new Date(atual.getFullYear() + 1, 0, 1)
+        else
+            t.setMonth(temp+1)
+        console.log(t)
         setAtual(t);
-        setSelecionado(meses[atual.getMonth()]);
-        setMes(constructMonthCalendar(atual));
+        setSelecionado(meses[t.getMonth()]);
+        setMes(constructMonthCalendar(t));
+        //console.log(atual);
     };
 
 
@@ -42,7 +51,7 @@ export default function AppCalendario() {
 
         <div id="lancamentos">
 
-            <div className="sml-title col-5">
+            <div className="sml-title col-5" id='calendario'>
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         className="bi bi-calendar" style={{ color: '#7c2bf5' }} viewBox="0 0 16 16">
@@ -58,7 +67,7 @@ export default function AppCalendario() {
                 </div>
             </div>
 
-            <table className="col-12 tab_borda" id='calendario'>
+            <table className="col-12 tab_borda">
                 <thead>
                     <tr>
 

@@ -1,35 +1,27 @@
+import { useState } from 'react';
+import { Navbar, Nav, Container } from 'react-bootstrap';
+
 export default function AppNavbar() {
+
+    const [activeKey, setActiveKey] = useState<string>('topo');
     return (
 
-        <header className="navbar navbar-expand-lg">
-            <div className="container-fluid">
-                <a href="#topo" className="navbar-brand"><img src='./img/logo.png' alt="Logo" id="logo" /></a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div id="navbarSupportedContent" className="menu collapse navbar-collapse">
-                    <ul className="navbar-nav mb-2 mb-lg-0">
-
-                        <li className="nav-item active">
-                            <a href="#topo" className="nav-link">Início</a>
-                        </li>
-
-                        <li className="nav-item">
-                            <a href="#jogos" className="nav-link">Jogos</a>
-                        </li>
-
-                        <li className="nav-item">
-                            <a href="#calendario" className="nav-link">Calendário de Lançamentos</a>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-        </header>
+        <Navbar className='header sticky-top' variant="dark" expand="lg">
+            <Container>
+                <Navbar.Brand href="#topo"><img src='./img/logo.png' alt="Logo" id="logo" /></Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav" className='menu' >
+                <Nav
+                    className="me-auto"
+                    activeKey={activeKey}
+                    onSelect={(selectedKey) => setActiveKey(selectedKey||'')}
+                >
+                    <Nav.Link eventKey="topo" href='#topo'>Início</Nav.Link>
+                    <Nav.Link eventKey="jogos" href='#jogos'>Jogos</Nav.Link>
+                    <Nav.Link eventKey="calendario" href='#calendario'>Calendário de Lançamentos</Nav.Link>
+                </Nav>
+            </Navbar.Collapse>
+        </Container>
+    </Navbar >
     )
 }

@@ -8,6 +8,7 @@ function App() {
 
   return (
     <>
+       <span id='topo'></span>
        <AppNavbar />
        <AppBanner />
        <AppJogos />

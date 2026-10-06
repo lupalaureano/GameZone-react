@@ -373,9 +373,10 @@ export default function AppJogos() {
     
 
     return (
+        
         <div id="lancamentos">
 
-            <div className="sml-title col-3" id='jogos'>
+            <div className="sml-title col-3"  id="jogos">
                 <div><img src="./img/fire.png" alt="foguinho" /></div>
                 <div>
                     <h4>Jogos</h4>
@@ -411,7 +412,7 @@ export default function AppJogos() {
 
             </div>
         </div>
-
+       
     )
 
 
