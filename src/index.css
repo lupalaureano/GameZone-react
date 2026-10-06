@@ -1,3 +1,135 @@
 html {
   scroll-behavior: smooth;
 }
+
+
+.news-article-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 24px;
+  align-items: start;
+}
+
+.news-article {
+  background-color: #000;
+  border: 1px solid #c9a5ff;
+  border-radius: 20px 10px;
+  overflow: hidden;
+}
+
+.news-article-cover {
+  position: relative;
+  min-height: 320px;
+  background-color: #020913;
+}
+
+.news-article-cover img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0) 100%);
+}
+
+.news-article-header {
+  padding: 8px 28px 0;
+}
+
+.news-article-header h1 {
+  font-size: 34px;
+  line-height: 1.2;
+  margin: 14px 0 12px;
+}
+
+.news-article-content {
+  padding: 8px 28px 32px;
+  box-shadow: inset 0 -1px 0 0 #6d2ce9;
+}
+
+.news-article-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #e8e0f5;
+  margin-bottom: 18px;
+}
+
+@media screen and (max-width: 991px) {
+  .news-article-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .news-article-cover img {
+    height: 240px;
+  }
+
+  .news-article-header,
+  .news-article-content {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .news-article-header h1 {
+    font-size: 26px;
+  }
+
+}
+
+.news-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.news-aside-card {
+  background-color: #020913;
+  border: 1px solid #233571;
+  border-radius: 20px 10px;
+  padding: 20px 18px;
+  box-shadow: inset 0 0 40px 0 #233571a8;
+}
+
+.news-aside-card h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+
+.news-related-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.news-related-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid #233571;
+}
+
+.news-related-list li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.news-related-list small {
+  display: block;
+  margin-top: 4px;
+  color: #9a88c4;
+  font-size: 12px;
+}
+
+
+.accordion-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease-out;
+  overflow: hidden;
+}
+
+.accordion-wrapper.is-open {
+  grid-template-rows: 1fr;
+}
+
+.accordion-content {
+  min-height: 0;
+}

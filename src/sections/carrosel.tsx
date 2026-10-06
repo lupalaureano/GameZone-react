@@ -1,5 +1,7 @@
 import $ from 'jquery';
-import React from 'react';
+import React, { useState } from 'react';
+import Card from '../components/Card';
+import Infos from '../components/Infos';
 
 
 
@@ -12,7 +14,7 @@ export default function AppJogos() {
             "nome": "EA Sports FC 27",
             "data_lancamento": "2026-09-25",
             "descricao": "Entre no The Grounds, o ponto de encontro do futebol onde as ruas e os estádios se unem. O EA SPORTS FC 27 reúne diferentes formas de jogar, desde partidas de Bate-bolas e confrontos 1x1 até o modo Clubs, permitindo desenvolver habilidades, jogar com amigos e personalizar sua experiência dentro e fora do campo.\n\nO jogo também apresenta uma jogabilidade mais autêntica, com maior controle sobre as ações em campo, movimentações ofensivas mais inteligentes, escanteios reformulados e uma defesa mais focada no controle manual. A Carreira de Manager recebe um Mercado de Transferências reformulado, enquanto o Football Ultimate Team ganha uma nova Galeria para organizar e celebrar os atletas e itens favoritos do seu clube.",
-            "caminho_imagem": "../img/jogos/2.png",
+            "caminho_imagem": "/2.png",
             "plataformas": [
                 "PlayStation 4",
                 "PlayStation 5",
@@ -33,7 +35,7 @@ export default function AppJogos() {
             "nome": "The Last of Us Part II Remastered",
             "data_lancamento": "2024-01-19",
             "descricao": "Viva novamente as jornadas de Ellie e Abby em uma versão remasterizada para PlayStation 5 e PC. A história apresenta Ellie e Abby em uma narrativa marcada por perdas, conflitos e consequências, enquanto ambas percorrem caminhos que acabam se cruzando em um mundo devastado por uma pandemia e pela violência humana.\n\nA versão Remastered apresenta melhorias gráficas, novos modos de jogo e recursos adicionais. Entre eles está Sem Volta, uma experiência de sobrevivência roguelike que permite enfrentar encontros aleatórios e jogar com diferentes personagens, além de integração com os recursos do controle DualSense e melhorias visuais desenvolvidas para aproveitar o hardware atual.",
-            "caminho_imagem": "../img/jogos/9.png",
+            "caminho_imagem": "/9.png",
             "plataformas": [
                 "PlayStation 5",
                 "PC"
@@ -50,7 +52,7 @@ export default function AppJogos() {
             "nome": "NBA 2K27",
             "data_lancamento": "2026-09-04",
             "descricao": "Entre em quadra para viver uma nova temporada da experiência NBA 2K. O jogo reúne diferentes maneiras de jogar basquete, permitindo disputar partidas, construir uma carreira, administrar uma franquia e competir em modos voltados para partidas online.\n\nA experiência combina a apresentação característica da NBA 2K com sistemas de progressão, personalização e competição. Os diferentes modos permitem que o jogador escolha entre construir sua trajetória individual, administrar uma equipe ou disputar partidas contra outros jogadores.",
-            "caminho_imagem": "../img/jogos/1.png",
+            "caminho_imagem": "/1.png",
             "plataformas": [
                 "PlayStation 5",
                 "Xbox Series X|S",
@@ -69,7 +71,7 @@ export default function AppJogos() {
             "nome": "The Legend of Zelda: Tears of the Kingdom",
             "data_lancamento": "2023-05-12",
             "descricao": "A sequência de The Legend of Zelda: Breath of the Wild leva Link novamente para as terras de Hyrule, mas amplia a aventura para além da superfície. O jogador pode explorar as vastas paisagens do reino, descobrir ilhas flutuantes nos céus e investigar regiões subterrâneas repletas de perigos e mistérios.\n\nLink também recebe novas habilidades que ampliam significativamente as possibilidades de exploração e criação. Com elas, é possível combinar objetos, construir veículos e estruturas, manipular elementos do cenário e criar diferentes soluções para atravessar o mundo e enfrentar seus inimigos. A aventura permite que cada jogador encontre seu próprio caminho por Hyrule.",
-            "caminho_imagem": "../img/jogos/4.png",
+            "caminho_imagem": "/4.png",
             "plataformas": [
                 "Nintendo Switch"
             ],
@@ -85,7 +87,7 @@ export default function AppJogos() {
             "nome": "Silent Hill f",
             "data_lancamento": "2025-09-25",
             "descricao": "SILENT HILL f leva a série de terror psicológico para o Japão da década de 1960. Na remota cidade montanhosa de Ebisugaoka, a adolescente Shimizu Hinako leva uma vida aparentemente comum até que uma espessa névoa transforma seu lar conhecido em um lugar desolado e aterrorizante.\n\nÀ medida que Hinako explora a cidade tomada pela névoa, ela precisa lidar com acontecimentos sobrenaturais e com uma realidade cada vez mais perturbadora. A história combina horror psicológico, beleza e terror em um cenário japonês marcado por elementos culturais e uma atmosfera de crescente tensão.",
-            "caminho_imagem": "../img/jogos/3.png",
+            "caminho_imagem": "/3.png",
             "plataformas": [
                 "PlayStation 5",
                 "Xbox Series X|S",
@@ -103,7 +105,7 @@ export default function AppJogos() {
             "nome": "RIDE 5",
             "data_lancamento": "2023-08-24",
             "descricao": "RIDE 5 coloca o jogador no centro de uma experiência dedicada ao motociclismo, oferecendo uma grande variedade de motocicletas e pistas para explorar. O jogo foi desenvolvido para proporcionar uma experiência de corrida com diferentes categorias, estilos de pilotagem e possibilidades de personalização.\n\nAlém das competições tradicionais, RIDE 5 oferece diferentes modos e desafios para quem deseja aprimorar suas habilidades. A experiência combina corridas, personalização das motos, diferentes condições de pista e uma variedade de eventos para construir uma trajetória no mundo das competições de motociclismo.",
-            "caminho_imagem": "../img/jogos/6.png",
+            "caminho_imagem": "/6.png",
             "plataformas": [
                 "PlayStation 5",
                 "Xbox Series X|S",
@@ -121,7 +123,7 @@ export default function AppJogos() {
             "nome": "Madden NFL 26",
             "data_lancamento": "2025-08-14",
             "descricao": "EA SPORTS Madden NFL 26 apresenta uma experiência de futebol americano construída a partir de dados de jogadas e situações reais da NFL. Um novo sistema de aprendizado de máquina utiliza quase uma década de informações para criar comportamentos mais específicos de jogadores e treinadores e proporcionar partidas mais explosivas.\n\nA jogabilidade inclui movimentação de atletas atualizada e interações físicas baseadas em física, incluindo tackles durante recepções, stiff-arms e trucks. No Ultimate Team, é possível construir uma equipe com lendas e estrelas atuais da NFL, enquanto o modo Franchise permite criar um legado como treinador utilizando novos arquétipos e estratégias.",
-            "caminho_imagem": "../img/jogos/12.png",
+            "caminho_imagem": "/12.png",
             "plataformas": [
                 "PlayStation 5",
                 "Xbox Series X|S",
@@ -140,7 +142,7 @@ export default function AppJogos() {
             "nome": "Forza Horizon 6",
             "data_lancamento": "2026-05-19",
             "descricao": "Forza Horizon 6 leva o Horizon Festival para o Japão, apresentando um enorme mundo aberto com contrastes entre áreas urbanas e rurais, regiões montanhosas, diferentes biomas e mudanças sazonais. O mapa inclui locais inspirados em estradas e paisagens japonesas, desde as ruas de Tokyo City até estradas de montanha e regiões cobertas de neve.\n\nA cultura automobilística japonesa é um dos elementos centrais da experiência. O jogo conta com mais de 550 carros no lançamento, opções ampliadas de personalização, novos Car Meets e atividades compartilhadas no mundo aberto. Os jogadores também podem formar grupos, explorar o Japão juntos, disputar corridas e utilizar as ferramentas do EventLab para criar novas experiências.",
-            "caminho_imagem": "../img/jogos/18.png",
+            "caminho_imagem": "/18.png",
             "plataformas": [
                 "Xbox Series X|S",
                 "PC",
@@ -158,7 +160,7 @@ export default function AppJogos() {
             "nome": "The Witcher 3: Wild Hunt",
             "data_lancamento": "2015-05-19",
             "descricao": "The Witcher 3: Wild Hunt acompanha Geralt de Rívia, um caçador de monstros profissional conhecido como bruxo. Em um mundo aberto de fantasia sombria, Geralt percorre diferentes regiões em busca de Ciri, sua filha adotiva, enquanto a misteriosa Caçada Selvagem se aproxima e uma série de conflitos ameaça o continente.\n\nA aventura permite explorar cidades, vilarejos, florestas, pântanos e regiões selvagens enquanto o jogador enfrenta monstros, participa de contratos, toma decisões e interage com diferentes personagens. As escolhas de Geralt podem alterar acontecimentos, relações e consequências da história, criando diferentes caminhos dentro da narrativa.",
-            "caminho_imagem": "../img/jogos/10.png",
+            "caminho_imagem": "/10.png",
             "plataformas": [
                 "PC",
                 "PlayStation 4",
@@ -179,7 +181,7 @@ export default function AppJogos() {
             "nome": "Need for Speed Heat",
             "data_lancamento": "2019-11-08",
             "descricao": "Need for Speed Heat coloca o jogador nas ruas de Palm City, onde as corridas acontecem de maneiras diferentes durante o dia e durante a noite. Durante o dia, os pilotos podem participar de eventos oficiais para ganhar dinheiro e construir sua reputação, enquanto a noite abre espaço para corridas ilegais e confrontos mais perigosos.\n\nQuanto maior a reputação construída nas ruas, maior também é a atenção das forças policiais. O jogador precisa decidir quanto está disposto a arriscar para aumentar sua reputação e conquistar novos carros e melhorias. A personalização dos veículos e a progressão pelas corridas fazem parte central da experiência.",
-            "caminho_imagem": "../img/jogos/11.png",
+            "caminho_imagem": "/11.png",
             "plataformas": [
                 "PC",
                 "PlayStation 4",
@@ -197,7 +199,7 @@ export default function AppJogos() {
             "nome": "Baldur's Gate 3",
             "data_lancamento": "2023-08-03",
             "descricao": "Reúna seu grupo e retorne aos Forgotten Realms em uma aventura de RPG baseada no universo de Dungeons & Dragons. Uma misteriosa habilidade começa a surgir dentro de você depois que um parasita de mind flayer é implantado em seu cérebro, colocando o personagem e seus companheiros diante de uma ameaça que pode transformar suas vidas.\n\nA aventura permite explorar um mundo repleto de personagens, criaturas e possibilidades. Companheiros podem se juntar ao grupo, alianças podem ser formadas ou quebradas e as decisões tomadas durante a jornada possuem consequências. Combate por turnos, exploração e escolhas narrativas se combinam para permitir diferentes maneiras de enfrentar os desafios.",
-            "caminho_imagem": "../img/jogos/7.png",
+            "caminho_imagem": "/7.png",
             "plataformas": [
                 "PC",
                 "PlayStation 5",
@@ -216,7 +218,7 @@ export default function AppJogos() {
             "nome": "Outlast",
             "data_lancamento": "2013-09-04",
             "descricao": "Outlast acompanha o jornalista investigativo Miles Upshur, que decide investigar informações sobre acontecimentos misteriosos no Mount Massive Asylum. Ao entrar na instituição, ele descobre que algo terrível aconteceu com os pacientes e funcionários, transformando sua investigação em uma luta pela sobrevivência.\n\nSem armas convencionais para enfrentar os perigos, Miles precisa utilizar sua câmera, esconder-se, correr e encontrar caminhos para escapar dos perseguidores. A visão noturna da câmera é essencial para explorar os ambientes escuros, mas seu uso limitado de bateria obriga o jogador a decidir quando utilizá-la.",
-            "caminho_imagem": "../img/jogos/17.png",
+            "caminho_imagem": "/17.png",
             "plataformas": [
                 "PC",
                 "PlayStation 4",
@@ -234,7 +236,7 @@ export default function AppJogos() {
             "nome": "Marvel's Spider-Man 2",
             "data_lancamento": "2023-10-20",
             "descricao": "Peter Parker e Miles Morales retornam para uma nova aventura no universo da Marvel. Os dois heróis precisam enfrentar novas ameaças enquanto protegem uma Nova York expandida, alternando entre suas histórias e habilidades durante a campanha.\n\nEntre os principais inimigos estão Venom e Kraven, além de outras ameaças que colocam a cidade em risco. O jogo também introduz novas habilidades, trajes e formas de atravessar a cidade, incluindo as Asas de Teia, permitindo que os dois Spider-Men percorram Nova York com maior velocidade e explorem áreas inéditas.",
-            "caminho_imagem": "../img/jogos/8.png",
+            "caminho_imagem": "/8.png",
             "plataformas": [
                 "PlayStation 5",
                 "PC"
@@ -251,7 +253,7 @@ export default function AppJogos() {
             "nome": "Resident Evil 4",
             "data_lancamento": "2023-03-24",
             "descricao": "Resident Evil 4 apresenta uma versão reconstruída do clássico jogo de survival horror. Leon S. Kennedy, agora um agente do governo dos Estados Unidos, recebe a missão de encontrar e resgatar Ashley Graham, filha do presidente, que desapareceu em uma região isolada da Europa.\n\nA missão leva Leon a uma comunidade aparentemente abandonada, onde ele encontra habitantes violentos e uma ameaça ligada a uma misteriosa organização. A aventura combina exploração, combate, gerenciamento de recursos e momentos de tensão enquanto Leon tenta descobrir o que aconteceu com Ashley e sobreviver ao ambiente hostil.",
-            "caminho_imagem": "../img/jogos/15.png",
+            "caminho_imagem": "/15.png",
             "plataformas": [
                 "PlayStation 4",
                 "PlayStation 5",
@@ -271,7 +273,7 @@ export default function AppJogos() {
             "nome": "God of War Ragnarök",
             "data_lancamento": "2022-11-09",
             "descricao": "Kratos e Atreus precisam viajar pelos Nove Reinos em busca de respostas enquanto as forças de Asgard se preparam para uma batalha profetizada. A relação entre pai e filho continua no centro da aventura, enquanto Atreus busca compreender seu próprio destino e Kratos tenta protegê-lo das consequências das escolhas do passado.\n\nDurante a jornada, os dois enfrentam deuses nórdicos, monstros e diferentes ameaças em ambientes que vão desde florestas e montanhas até regiões congeladas e reinos míticos. O combate combina as armas de Kratos, habilidades de Atreus e novos equipamentos, enquanto a exploração permite descobrir caminhos, tesouros e histórias espalhadas pelos reinos.",
-            "caminho_imagem": "../img/jogos/5.png",
+            "caminho_imagem": "/5.png",
             "plataformas": [
                 "PlayStation 4",
                 "PlayStation 5",
@@ -289,7 +291,7 @@ export default function AppJogos() {
             "nome": "Cyberpunk 2077",
             "data_lancamento": "2020-12-10",
             "descricao": "Cyberpunk 2077 coloca o jogador em Night City, uma enorme metrópole obcecada por poder, glamour e modificações corporais. O jogador assume o papel de V, um mercenário que recebe uma missão que o coloca em contato com um implante experimental capaz de conceder a imortalidade.\n\nEnquanto V tenta descobrir como sobreviver às consequências do implante, a cidade oferece diferentes caminhos para explorar, personagens para conhecer e missões para realizar. Habilidades, armas, implantes cibernéticos e decisões narrativas permitem desenvolver diferentes estilos de jogo e influenciar a trajetória do protagonista.",
-            "caminho_imagem": "../img/jogos/13.png",
+            "caminho_imagem": "/13.png",
             "plataformas": [
                 "PC",
                 "PlayStation 4",
@@ -309,7 +311,7 @@ export default function AppJogos() {
             "nome": "Red Dead Redemption 2",
             "data_lancamento": "2018-10-26",
             "descricao": "Red Dead Redemption 2 acompanha Arthur Morgan, um dos principais membros da gangue Van der Linde. Em 1899, o grupo precisa fugir das autoridades enquanto o avanço da civilização e das leis começa a transformar o Velho Oeste americano. Arthur precisa equilibrar sua lealdade à gangue com as consequências de suas escolhas.\n\nO mundo aberto permite explorar cidades, montanhas, florestas, rios e regiões selvagens enquanto Arthur participa de missões, caça, pesca, encontros aleatórios e atividades da vida no Velho Oeste. As relações com os integrantes da gangue e as decisões tomadas ao longo da história fazem parte da jornada de Arthur enquanto o grupo luta para sobreviver.",
-            "caminho_imagem": "../img/jogos/16.png",
+            "caminho_imagem": "/16.png",
             "plataformas": [
                 "PlayStation 4",
                 "Xbox One",
@@ -327,7 +329,7 @@ export default function AppJogos() {
             "nome": "Grand Theft Auto VI",
             "data_lancamento": "2026-11-19",
             "descricao": "Grand Theft Auto VI apresenta Jason e Lucia, dois personagens que se encontram em uma situação complicada depois que um trabalho aparentemente simples dá errado. Os dois acabam envolvidos no lado mais sombrio de Leonida e precisam depender um do outro para sobreviver.\n\nA história acontece em Leonida, estado que inclui Vice City e outras regiões. A trama coloca a dupla no centro de uma conspiração criminosa que atravessa o estado, combinando personagens, locais e atividades características do universo Grand Theft Auto. O jogo apresenta uma nova versão de Vice City e diferentes regiões de Leonida para explorar.",
-            "caminho_imagem": "../img/jogos/14.png",
+            "caminho_imagem": "/14.png",
             "plataformas": [
                 "PlayStation 5",
                 "Xbox Series X|S"
@@ -341,152 +343,8 @@ export default function AppJogos() {
         }
     ]
 
-
-    let conteudo = "";
-    for (let j of jogos) {
-
-        //console.log(j.nome);
-
-        let plataformas = "";
-        for (let p in j.plataformas) {
-
-
-
-            if (j.plataformas[p] == "Xbox Series X|S")
-                plataformas += `<img src="./img/jogos/xbox-plat-logo.png" alt="plataforma" />`
-            else if (j.plataformas[p] == "PlayStation 5")
-                plataformas += `<img src="./img/jogos/ps-plat-logo.png" alt="plataforma" />`
-            else if (j.plataformas[p] == "Nintendo Switch")
-                plataformas += `<img src="./img/jogos/sw-plat-logo.png" alt="plataforma" />`
-            else if (j.plataformas[p] == "PC")
-                plataformas += `<img src="./img/jogos/win-plat-logo.png" alt="plataforma" />`
-
-        }
-
-        conteudo += `<div class="carousel-item carousel-item-home" id="${j.id}"  >
-                            <div class="card card-home">
-                                <div class="img-wraper">
-                                        <img class="card-img-top card-img-top-home img-home" src="${j.caminho_imagem}"
-                                            alt="${j.nome}" />
-                                    </div>
-                                    <div class="card-body card-body-home" style = "height: 145px;">
-                                        <span class="badge badge-secondary">${j.genero}</span>
-                                        <h5 class="card-title card-title-home">${j.nome}</h5>
-                                        <p class="card-text card-text-home">${j.descricao.slice(0, 63)}...
-                                        </p>
-                                    </div>
-                                    <div class="card-rating-plat">
-                                        <div>
-                                            <img src="./img/jogos/star.png" alt="estrelas" style= "filter: grayscale(); height: 15px;"  /><span>${j.nota_metacritic}</span>
-                                        </div>
-                                        <div>
-                                            ${plataformas}
-                                        </div>
-                                    </div>
-                                
-                            </div>
-                        </div>`;
-    }
-    $(document).ready((): void => { $("#carroselInner").html(conteudo); })
-
-     
-
-
-    // const abrir = (id: Number) => {
-    //     const jogoId: any = id;
-
-    //     const jogo = jogos[jogoId - 1];
-
-
-    //     const plataformas = document.createElement('li');
-    //     plataformas.style.justifyContent = "flex-start";
-    //     for (let p in jogo.plataformas) {
-
-    //         const platImg = document.createElement('img');
-
-
-    //         if (p == "Plastation 5" || p == "Playstation 4") {
-    //             platImg.src = "../img/ps-plat-logo.png";
-    //             plataformas.appendChild(platImg);
-    //         } else if (p == "Xbox Series X|S" || p == "Xbox One") {
-    //             platImg.src = "../img/xbox-plat-logo.png";
-    //             plataformas.appendChild(platImg);
-    //         } else if (p == "Nintendo Switch") {
-    //             platImg.src = "../img/sw-plat-logo.png";
-    //             plataformas.appendChild(platImg);
-    //         } else if (p == "PC") {
-    //             platImg.src = "../img/win-plat-logo.png";
-    //             plataformas.appendChild(platImg);
-    //         }
-    //         platImg.style.filter = "grayscale(100%) invert(100%)"
-    //         platImg.style.marginLeft = "15px";
-    //         platImg.style.height = "15px";
-    //         platImg.style.width = "15px";
-
-
-    //     };
-    //     const dataLancamento = document.createElement('li');
-    //     let data_split = jogo.data_lancamento;
-    //     let order = data_split.split("-")
-    //     order.reverse();
-    //     //console.log(order);
-    //     dataLancamento.appendChild(document.createTextNode("Lançamento: " + order[0] + "/" + order[1] + "/" + order[2]));
-    //     const nota_metacritic = document.createElement('li');
-    //     if(jogo.nota_metacritic){
-    //         let nota : any = jogo.nota_metacritic / 10;
-    //         nota_metacritic.innerHTML = nota;
-    //     }
-    //     nota_metacritic.className = "bi bi-star-fill";
-    //     const jogadores = document.createElement('li');
-    //     jogadores.appendChild(document.createTextNode("Jogadores: " + jogo.quantos_jogadores));
-    //     const controle = document.createElement('li');
-    //     const publisher = document.createElement('li');
-    //     publisher.innerHTML = "Publisher: " + jogo.publisher;
-    //     const studio = document.createElement('li');
-    //     studio.innerHTML = "Studio: " + jogo.studio;
-
-    //     if (jogo.aceita_controle) {
-    //         const contr = document.createElement('img');
-    //         contr.src = "../img/console.png"
-    //         controle.appendChild(contr);
-    //         contr.style.height = "40px";
-    //         contr.style.width = "40px";
-    //         contr.style.filter = "grayscale(100%) invert(100%)"
-
-    //     }
-
-    //     const article = ` 
-    //     <div class="news-article-layout">
-    //         <article class="news-article">
-    //             <div id="cover" class="news-article-cover">
-    //                 <img src=${jogo.caminho_imagem} alt=${jogo.nome} title=${jogo.nome} />
-    //             </div>
-
-    //             <header class="news-article-header">
-    //                 <h1 id="gameName">${jogo.nome}</h1>
-                    
-    //             </header>
-
-    //             <div class="news-article-content">
-    //                 <p id="descricao">${jogo.descricao}</p>
-                    
-    //             </div>
-    //         </article>
-    //         <aside class="news-aside" aria-label="Complementos">
-    //             <div class="news-aside-card news-related">
-    //                 <h2>Informações</h2>
-    //                 <ul class="news-related-list" id="infos">
-    //                 ${dataLancamento}${plataformas}${jogadores}${publisher}${studio}${nota_metacritic}${controle}
-    //                 </ul>
-    //             </div>
-    //         </aside>
-    //     </div>
-    //     `
-    //     $("#jogo").html(article);
-
-
-    // }
-    
+    let [id, setId] = useState(0);
+    let [aberto, setAberto] = useState(false);     
 
     var scrollPosition = 0;
     const next: React.MouseEventHandler<HTMLButtonElement> = () => {
@@ -512,25 +370,30 @@ export default function AppJogos() {
         }
     }
 
-
-
-
-
+    
 
     return (
         <div id="lancamentos">
 
-            <div className="sml-title col-3">
+            <div className="sml-title col-3" id='jogos'>
                 <div><img src="./img/fire.png" alt="foguinho" /></div>
                 <div>
                     <h4>Jogos</h4>
                 </div>
             </div>
-            <div id="jogo">
+            <div>
 
                 <div id="carouselExample" className="carousel slide">
                     <div className="carousel-inner carousel-inner-home" id="carroselInner">
+                        {jogos.map((jogo) => {
+                            return <Card jogo={jogo} key={jogo.id} onCardClick={() => {
+                                console.log(aberto);
+                                (id === jogo.id && aberto === true  ? (aberto ? setAberto(false) : setAberto(true)) : setAberto(true))
+                                
+                                setId(jogo.id);
 
+                            }} />
+                        })}
                     </div>
                     <button className="carousel-control-prev carousel-control-prev-home" type="button" onClick={prev}>
                         <span className="carousel-control-prev-icon carousel-control-prev-icon-home" aria-hidden="true"></span>
@@ -542,10 +405,9 @@ export default function AppJogos() {
                     </button>
 
 
-
-
-
                 </div>
+
+                {aberto === true && <Infos jogo = {jogos[id-1]} key={id} />} 
 
             </div>
         </div>

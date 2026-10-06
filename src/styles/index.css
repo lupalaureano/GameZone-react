@@ -276,6 +276,7 @@ h1 {
     border: none;
     justify-content: space-between;
     opacity: .2;
+    width: 6%;
 }
 
 .carousel-control-next-home {
@@ -295,6 +296,10 @@ h1 {
         display: block;
         margin: 0;
         flex: 0 0 calc(100% / 4);
+    }
+
+    .carousel-item-home:hover {
+        transform: scale(105%);
     }
 
     .img-wraper {
