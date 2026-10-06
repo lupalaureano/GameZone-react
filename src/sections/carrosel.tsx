@@ -369,6 +369,11 @@ export default function AppJogos() {
             $('.carousel-inner').animate({ scrollLeft: scrollPosition }, 600);
         }
     }
+  
+
+
+
+    
 
     
 
@@ -388,7 +393,7 @@ export default function AppJogos() {
                     <div className="carousel-inner carousel-inner-home" id="carroselInner">
                         {jogos.map((jogo) => {
                             return <Card jogo={jogo} key={jogo.id} onCardClick={() => {
-                                console.log(aberto);
+                                //console.log(aberto);
                                 (id === jogo.id && aberto === true  ? (aberto ? setAberto(false) : setAberto(true)) : setAberto(true))
                                 
                                 setId(jogo.id);

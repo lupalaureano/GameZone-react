@@ -124,10 +124,12 @@ html {
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.35s ease-out;
   overflow: hidden;
+  
 }
 
 .accordion-wrapper.is-open {
   grid-template-rows: 1fr;
+  scroll-margin-top: 300px;
 }
 
 .accordion-content {

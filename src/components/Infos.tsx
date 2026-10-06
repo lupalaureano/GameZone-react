@@ -1,4 +1,4 @@
-import { useState , useEffect} from "react";
+import { useState, useEffect } from "react";
 export default function Infos({ jogo }: any) {
 
     let data_split = jogo.data_lancamento;
@@ -18,13 +18,14 @@ export default function Infos({ jogo }: any) {
         setIsOpen(true);
     }, []);
 
+   
 
     return (
-        <div className={`accordion-wrapper ${isOpen ? 'is-open' : ''}`}>
+        <div className={`accordion-wrapper ${isOpen ? 'is-open' : ''}`} key={jogo.id + jogo.nome} >
             <div className="news-article-layout accordion-content">
                 <article className="news-article">
-                    <div id="cover" className="news-article-cover">
-                        <img src={"./img/jogos/game" + jogo.caminho_imagem} alt={jogo.nome} title={jogo.nome}  />
+                    <div id="cover" className="news-article-cover" >
+                        <img src={"./img/jogos/game" + jogo.caminho_imagem} alt={jogo.nome} title={jogo.nome} />
                     </div>
 
                     <header className="news-article-header">
@@ -32,7 +33,7 @@ export default function Infos({ jogo }: any) {
 
                     </header>
 
-                    <div className="news-article-content" id={jogo.id+'-'+jogo.nome}>
+                    <div className="news-article-content" id={jogo.id + '-' + jogo.nome}>
                         <p id="descricao">{jogo.descricao}</p>
 
                     </div>
@@ -47,13 +48,13 @@ export default function Infos({ jogo }: any) {
                                 {jogo.plataformas.map((p: String) => {
 
                                     if (p == "Plastation 5" || p == "Playstation 4") {
-                                        return <img src="./img/jogos/ps-plat-logo.png" style={{ filter: "grayscale(100%) invert(100%)", marginLeft: '15px', height: '15px', width: '15px' }} />
+                                        return <img src="./img/jogos/ps-plat-logo.png" style={{ filter: "grayscale(100%) invert(100%)", marginLeft: '15px', height: '15px', width: '15px' }} key={jogo.id + p} />
                                     } else if (p == "Xbox Series X|S" || p == "Xbox One") {
-                                        return <img src="../img/jogos/xbox-plat-logo.png" style={{ filter: "grayscale(100%) invert(100%)", marginLeft: '15px', height: '15px', width: '15px' }} />
+                                        return <img src="../img/jogos/xbox-plat-logo.png" style={{ filter: "grayscale(100%) invert(100%)", marginLeft: '15px', height: '15px', width: '15px' }} key={jogo.id + p} />
                                     } else if (p == "Nintendo Switch") {
-                                        return <img src="../img/jogos/sw-plat-logo.png" style={{ filter: "grayscale(100%) invert(100%)", marginLeft: '15px', height: '15px', width: '15px' }} />
+                                        return <img src="../img/jogos/sw-plat-logo.png" style={{ filter: "grayscale(100%) invert(100%)", marginLeft: '15px', height: '15px', width: '15px' }} key={jogo.id + p} />
                                     } else if (p == "PC") {
-                                        return <img src="./img/jogos/win-plat-logo.png" style={{ filter: "grayscale(100%) invert(100%)", marginLeft: '15px', height: '15px', width: '15px' }} />
+                                        return <img src="./img/jogos/win-plat-logo.png" style={{ filter: "grayscale(100%) invert(100%)", marginLeft: '15px', height: '15px', width: '15px' }} key={jogo.id + p} />
                                     }
                                 })}
                             </li>
